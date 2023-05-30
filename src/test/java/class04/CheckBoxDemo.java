@@ -7,11 +7,13 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class CheckBoxDemo extends CommonMethods {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         String url="http://practice.syntaxtechs.net/basic-checkbox-demo.php";
         String browser="chrome";
         openBrowserAndLaunchApplication(url,browser);
+
+        Thread.sleep(2000);
 
         //check the checkbox if it is already not checked
         WebElement c1= driver.findElement(By.xpath("//input[@id='isAgeSelected']"));
@@ -19,6 +21,9 @@ public class CheckBoxDemo extends CommonMethods {
         if(!c1.isSelected()){
             c1.click();
         }
+
+        Thread.sleep(2000);
+
       List<WebElement> options = driver.findElements(By.xpath("//input[@class='cb1-element']"));
 
         for(WebElement option:options){

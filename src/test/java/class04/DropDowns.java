@@ -19,6 +19,7 @@ public class DropDowns extends CommonMethods {
         //it only shows up after click on create new account
         //and the code takes some time to appear in DOM for firstName
         //and we must add a sleep here
+
         Thread.sleep(2000);
 
 
